@@ -1,0 +1,16 @@
+/site/
+/.venv/
+/.venv-tools/
+/.cache/
+/.local/
+/.secrets/
+/.obsidian/
+__pycache__/
+*.pyc
+.DS_Store
+.env
+.env.*
+*.log
+*.sql
+*.sql.gz
+*.dump

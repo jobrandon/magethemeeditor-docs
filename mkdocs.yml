@@ -1,0 +1,65 @@
+site_name: MageThemeEditor Docs
+site_description: Product direction, architecture, requirements, and delivery evidence for MageThemeEditor.
+# Set site_url only after a separate documentation host is approved.
+repo_url: https://github.com/jobrandon/magethemeeditor-docs
+repo_name: jobrandon/magethemeeditor-docs
+edit_uri: blob/main/content/
+docs_dir: content
+site_dir: site
+strict: true
+dev_addr: 127.0.0.1:8017
+
+theme:
+  name: material
+  language: en
+  font: false
+  palette:
+    - scheme: default
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+plugins:
+  - search
+  - awesome-pages
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - toc:
+      permalink: true
+
+validation:
+  nav:
+    omitted_files: warn
+    absolute_links: warn
+  links:
+    anchors: warn
+    absolute_links: warn
+    unrecognized_links: warn
+
+exclude_docs: |
+  **/AGENTS.md
+  **/.gitkeep
+  _private/

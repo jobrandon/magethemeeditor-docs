@@ -1,0 +1,8 @@
+nav:
+  - Home: index.md
+  - product
+  - architecture
+  - requirements
+  - roadmap
+  - decisions
+  - contributing
