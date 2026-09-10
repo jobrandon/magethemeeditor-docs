@@ -16,13 +16,38 @@ The live project was Planned with no start or target date at inspection.
 Research capture is the sole Done issue in this baseline. Merchant validation is Todo; 32 issues
 are Backlog. Milestones and issue creation are planning evidence, not delivery evidence.
 
+## Current developer-package proof
+
+The [8 September section-library batch](section-library-evidence-2026-09-08.md) adds five original
+portable sections, a separate developer-authored notice and one bounded native Magento registration.
+See the [developer package contract](../architecture/developer-packages.md) and
+[full reference inventory](section-library-reference-inventory-2026-09-08.md). This is local proof;
+full native adapters, public SDK and commercialization remain open.
+
+## Future theme ecosystem
+
+The user subsequently confirmed [third-party themes and a marketplace](theme-ecosystem.md) as
+future product direction. The proposed sequence is an authoring SDK and creator pilot, a curated
+catalog, then paid distribution with potential platform commissions. Preserve extensible theme
+and component contracts in the initial architecture; seller accounts, marketplace UI, and payments
+remain outside the initial editor MVP. The separate
+[MageThemeEditor — Theme Ecosystem & Marketplace project](https://linear.app/solventech/project/magethemeeditor-theme-ecosystem-and-marketplace-f118322e5577)
+now holds three planning documents, with no issues or execution milestones. See its
+[verified planning status](theme-ecosystem.md#planning-status). The dated core-project baseline
+above is unchanged.
+
 ## Immediate planning follow-through
 
 Merchant discovery and an explicit support matrix should inform the integration proof. Carry
 [hybrid adoption](../requirements/hybrid-adoption.md) through scope, schema/UX, local rendering,
 publication/restoration, migration, adapters, and regression work. The detailed routing/isolation
-criteria still need authorized issue updates; this setup does not synchronize them.
+criteria were subsequently synchronized during [Batch 01](batch-01-evidence-2026-09-07.md#linear-synchronization).
+Follow the [execution plan and batch ledger](execution-plan.md) for the current bounded sequence;
+the earlier baseline above remains a historical observation.
 
 Use the [decision register](../decisions/index.md) for open architecture choices and the
 [validation plan](../requirements/validation-plan.md) for proof requirements. Set dates and
 estimates after scope and the first integration results.
+
+- [Commerce catalog subset and open data/provider criteria](commerce-catalog-evidence-2026-09-08.md)
+- [Exact commerce field/block coverage](commerce-field-coverage-2026-09-08.md)

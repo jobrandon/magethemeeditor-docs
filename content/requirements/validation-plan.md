@@ -1,16 +1,22 @@
 # Validation plan
 
-Status: proposed evidence plan; execution outstanding. Updated: 7 September 2026.
+Status: evidence plan with partial local execution; broad acceptance remains open. Updated: 7 September 2026.
 Derived from the [research validation sequence](../architecture/theme-editor-research-2026-09-07.md#opportunity-map-and-validation-sequence)
 and [hybrid adoption requirements](hybrid-adoption.md).
 
 | Stage | Evidence to collect | Decision enabled |
 | --- | --- | --- |
+| Before third-party adoption | Exact version/edition, authoritative terms, intended use, dependency/asset coverage, obligations, and recorded review | Select tools only when the intended commercial use is established; resolve uncertain rights early |
 | Merchant and agency discovery | Recent real change requests, effort/cost, editor comparisons, adoption constraints, willingness to pay | Scope the outcome and support matrix; proposed sample is five merchants and two agencies |
 | Integration proof | Reproducible Luma/Hyvä fixtures, hero/product grid, original mixed content, preview, publication, restoration, local-mode outage | Validate the hosted-editor/local-renderer architecture and theme-specific effort |
 | Hybrid routing and isolation | HYB-01 through HYB-12 across declared page/region scopes and untouched surfaces | Validate partial adoption without requiring theme replacement |
 | Private beta readiness | Permissions, signing, tenant isolation, recovery, upgrades, commerce/cache tests, CSP, accessibility, performance | Approve only the tested compatibility matrix and operational behavior |
+| Commercial release | Exact release inventory/SBOM, fulfilled notices/source obligations, service entitlements and relevant legal review | Meet [third-party release requirements](third-party-compliance.md#before-commercial-release) for the actual distributed product |
 | Merchant pilot | Time to first preview/publish, routine changes without help, mismatch and failure rates, restoration time, support effort | Decide whether the product works for its intended users and what to expand |
+
+The [Batch 03A evidence](../roadmap/batch-03a-evidence-2026-09-07.md) supplies one local native
+Luma home-hero install/select/restore experiment. It does not complete the integration, hybrid,
+private-beta or commercial stages above; full fixtures and cache/commerce/security scenarios remain.
 
 ## Technical evidence boundaries
 
@@ -34,4 +40,4 @@ commands, target assignment and release IDs, expected and observed behavior, lin
 failures, and unresolved limits. Summarize sensitive evidence without copying production records.
 
 Set numerical success targets after measuring a baseline. No customer savings, conversion lift,
-runtime compatibility, production readiness, or interview completion is claimed yet.
+broad runtime compatibility, production readiness, or interview completion is claimed yet.

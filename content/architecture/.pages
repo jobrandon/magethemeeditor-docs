@@ -1,5 +1,11 @@
 title: Architecture
 nav:
+  - full-page-theme.md
+  - cms-page-delivery.md
   - system-boundaries.md
+  - content-contract.md
+  - editor-concept.md
+  - developer-packages.md
+  - integration-fixtures.md
   - research-provenance.md
   - theme-editor-research-2026-09-07.md

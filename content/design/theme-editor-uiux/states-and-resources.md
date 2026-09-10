@@ -6,6 +6,12 @@ Status: **proposed**, 2026-09-10. This document separates merchant-facing concep
 
 ## Resource ownership
 
+Navigation refinement · 2026-09-10: follow
+[interactive storefront navigation and unsaved changes](storefront-navigation.md) for page exits,
+named-resource confirmation and save-and-continue behavior. Internal buffers remain separate;
+saved but unpublished drafts do not trigger a data-loss warning. The refined flow is pending
+implementation and does not change the historical evidence below.
+
 | Editing context | Draft owner | Current fields / limits | Proposed save label |
 | --- | --- | --- | --- |
 | Current page | One page buffer | Template, head title, meta description, typed section array | Save page draft |

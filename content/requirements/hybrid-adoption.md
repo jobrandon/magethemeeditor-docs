@@ -1,10 +1,21 @@
 # Hybrid adoption requirements
 
-Status: **confirmed product direction; detailed acceptance criteria proposed for delivery planning**.
+## Full-theme and hybrid ownership · 8 September 2026
+
+The full compatible default theme is a separate required adoption path: it owns selected pages
+from head to footer, with shared Header / Template / Footer resources, menus and Alpine storefront
+behavior independent of RequireJS/Luma scripts. A CMS-region shell cannot satisfy that criterion.
+Unassigned/hybrid routes retain their declared host-theme ownership. Read the binding
+[full-theme/menu requirements](../architecture/full-page-theme.md) and
+[actual evidence](../roadmap/full-page-theme-evidence-2026-09-08.md).
+
+Status: **confirmed product direction; detailed criteria synchronized into existing Linear scope**.
 Updated: 7 September 2026. Source: the user's explicit product direction, the
 [research baseline](../architecture/theme-editor-research-2026-09-07.md), and
 [nine live-read Linear issues](../roadmap/linear-baseline-2026-09-07.md#hybrid-adoption-coverage-gap).
-These criteria are not implemented, runtime-verified, or fully synchronized into Linear.
+Batch 01 synchronized the complete mapped requirement/evidence text into 13 existing issues.
+See the [dated synchronization evidence](../roadmap/batch-01-evidence-2026-09-07.md#linear-synchronization).
+The criteria remain uncompleted and unverified on Magento.
 
 ## Intended outcome
 
@@ -12,6 +23,11 @@ A merchant keeps the active storefront/theme and adopts the editor only where se
 home/CMS pages, particular product detail pages (PDPs), category pages, or registered regions.
 The rest of the storefront remains under its existing renderer. Installing the connector alone
 does not opt in pages, replace a theme, or rewrite content.
+
+The [CMS pages and storefront delivery proposal](../architecture/cms-page-delivery.md) describes
+how existing CMS identities could use separate MTE assignments and published JSON, with preserved
+original content and store-hosted runtime/assets. It is a proposed implementation approach for
+the criteria below, not additional runtime evidence or a new Linear synchronization.
 
 ## Assignment and renderer contract
 
@@ -21,9 +37,9 @@ activation state, and restoration reference. Expose the effective inherited/over
 to the merchant before preview and publication. URLs alone are not a sufficient entity identity.
 
 Default to the original renderer for unassigned targets. Prevent ambiguous overlapping page and
-region assignments from publication until a documented precedence rule resolves them. The exact
-schema and precedence algorithm remain design work; this page specifies the required observable
-behavior without inventing a finalized API.
+region assignments from publication until a documented precedence rule resolves them. The initial
+[executable contract](../architecture/content-contract.md#assignment-ownership-and-precedence) rejects
+page/region overlap on the same entity. It is a local prototype, not a released Magento API.
 
 One renderer owns a selected page surface or region at a time. A page-content assignment does
 not implicitly replace the surrounding header, footer, cart, or checkout. Declared region adapters
@@ -67,10 +83,12 @@ Record fixtures, exact versions, initial state, changed targets, original snapsh
 commands, screenshots, commerce results, and limits in future evidence pages. None of these
 scenarios have been run by this documentation setup.
 
-## Linear planning gap
+## Linear synchronization
 
 SOL-491/492/493/496/503/509/510/511/513 cover related scope, assignments, regions, migration,
 and regression work. The audit found partial coverage, not the complete contract above.
 The [coverage table](../roadmap/linear-baseline-2026-09-07.md#hybrid-adoption-coverage-gap) identifies
-where future issue updates should record the missing criteria. Updating this document does not
-change those issues.
+where the earlier audit found missing criteria. Batch 01 subsequently appended the mapped complete
+requirements and evidence to those issues plus SOL-494/505/506/514, preserving their original scope
+and relationships. The [readback record](../roadmap/batch-01-evidence-2026-09-07.md#linear-synchronization)
+identifies exactly what changed; it does not prove implementation.

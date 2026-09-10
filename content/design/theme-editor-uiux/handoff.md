@@ -6,6 +6,11 @@ Status: **compact visual refinement under review**, 2026-09-10. No redesign has 
 
 ## What exists and what is proposed
 
+Next navigation requirement · 2026-09-10: use the
+[interactive storefront navigation specification](storefront-navigation.md) for the user-required
+editor layer, ordinary links and unsaved-change guard. Its acceptance checks supplement this
+historical handoff; it does not establish a newly dispatched implementation batch.
+
 | Concern | Current evidence from source/UI | Proposed design work |
 | --- | --- | --- |
 | Full-page structure | Fixed shared Header/Footer and page template preview | Unified outline with synchronized contextual selection |

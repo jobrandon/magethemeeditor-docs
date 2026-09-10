@@ -42,6 +42,7 @@ The current editor has 14 page/template choices. It has separate page and shared
 | Document | Purpose |
 | --- | --- |
 | [Interaction specifications](interactions.md) | Selection, library insertion, nested drag-and-drop, inspector controls and accessibility |
+| [Interactive storefront navigation](storefront-navigation.md) | Editor as a layer over a working storefront; link navigation, unsaved-change confirmation and safe draft saves |
 | [States and resources](states-and-resources.md) | Page/shared scope, menus, save/reload/undo/history distinctions and sample scenarios |
 | [Implementation handoff](handoff.md) | Existing capability versus proposal, local sandbox boundary and acceptance checks |
 | [Current element coverage](coverage/index.md) | All 66 types, fields, blocks, limits, preview briefs and placement/capability caveats |

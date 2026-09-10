@@ -13,11 +13,21 @@ not that repository's infrastructure. Do not modify the shared original during n
 
 ## Before editing
 
-1. Read this file, `README.md`, the affected pages, and any nearer instructions.
+1. Read the workspace `../AGENTS.md`, this file, `README.md`, the affected pages, and any nearer instructions.
 2. Inspect `git status --short --branch`, the repository root, and current remotes before Git work.
 3. Preserve unrelated changes. Product code belongs in its application repository, outside this one.
 4. Read the decision register and distinguish confirmed direction, proposals, open questions,
    observed evidence, and verified implementation.
+
+## Task-based skills
+
+The canonical task-to-skill map is in `../AGENTS.md`; installed project skills are in
+`../.agents/skills/`. Markdown authoring, evidence updates, navigation edits and established
+MkDocs checks use the documentation instructions without loading React, Node or Tailwind
+skills. Use `web-design-guidelines` for an actual documentation-interface accessibility or
+interaction review; use other development skills only if the changed implementation matches
+their runtime and scope. Do not introduce React or Tailwind into MkDocs to satisfy a skill.
+Document verified skill use and outcomes without treating guidance as implementation evidence.
 
 ## Authoring and evidence
 
@@ -35,10 +45,15 @@ not that repository's infrastructure. Do not modify the shared original during n
 - Keep `architecture/theme-editor-research-2026-09-07.md` byte-identical to the original baseline.
   Put corrections and later decisions in separate linked pages; update provenance for a deliberate
   future replacement. Never silently rewrite the historical baseline.
-- Research is completed; merchant interviews, product implementation, and Magento runtime checks
-  are outstanding. Hybrid adoption is confirmed direction; its detailed local acceptance criteria
-  remain proposed for Linear synchronization. Do not claim that gap is fixed remotely.
+- Research is completed; Batch 01 adds a local contract/validation prototype. Merchant interviews,
+  editor/connector implementation and Magento runtime checks remain outstanding. Hybrid acceptance
+  criteria were synchronized into 13 existing Linear issues; see
+  `content/roadmap/batch-01-evidence-2026-09-07.md` for exact mappings and verified readback.
+  Synchronization and the local model do not complete those runtime criteria.
 - Record branch/SHA, environment, command, outcome, and limits when reporting future runtime proof.
+- Follow `content/requirements/third-party-compliance.md` when introducing documentation tooling
+  or assets and when recording product dependency choices. Capture exact versions/editions, intended
+  use and obligations; distinguish proposed candidates from reviewed adoption and release evidence.
 - Keep secrets, customer data, raw exports, and credentials out of this repository. Summarize evidence.
   `.local/` is ignored local scratch space, outside `content/`; `exclude_docs` is a publication filter,
   not an access-control boundary.

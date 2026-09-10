@@ -5,6 +5,15 @@ Updated: 7 September 2026. Sources: the [research baseline](../architecture/them
 the user's subsequent hybrid-adoption direction, and the
 [live-read Linear project baseline](../roadmap/linear-baseline-2026-09-07.md).
 
+## Default-theme requirement · 8 September 2026
+
+The original default-theme candidate must own selected pages from head to footer, with shared
+menus/settings, Header / Template / Footer editing, Alpine CSP storefront behavior independent of
+RequireJS/Luma JavaScript, and Magento-owned account/catalog/cart/checkout operations. See the
+[full-theme contract](../architecture/full-page-theme.md) and
+[populated local commerce evidence](../roadmap/full-theme-commerce-evidence-2026-09-09.md).
+The complete Flux capability set remains required; the first five full-theme pages are not final scope.
+
 ## Merchant outcome
 
 Help merchants and agencies make routine storefront changes, preview the actual result, publish
@@ -46,6 +55,15 @@ Checkout replacement, universal theme conversion, a general template engine, hos
 rendering, and an unrestricted marketplace are outside the initial commitment. Liquid is optional;
 it is not a dependency for JSON settings or native Magento templates. Locator, advanced reviews,
 app blocks, and assisted editing require later discovery.
+
+## Future creator ecosystem
+
+The user has confirmed third-party themes and an eventual marketplace as future direction.
+Developers can author their own themes, sections, and blocks against our standards; creators may
+later sell themes through seller accounts, with a possible platform commission on theme sales.
+The [future ecosystem roadmap](../roadmap/theme-ecosystem.md) proposes staged delivery and preserves
+hybrid adoption. Actual Liquid support, authoring runtime, commercial terms, and delivery dates
+remain undecided. Marketplace implementation is outside the initial editor scope.
 
 ## Validation before product claims
 

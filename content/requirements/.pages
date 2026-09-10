@@ -1,4 +1,6 @@
 title: Requirements
 nav:
   - hybrid-adoption.md
+  - mvp-support-matrix.md
+  - third-party-compliance.md
   - validation-plan.md

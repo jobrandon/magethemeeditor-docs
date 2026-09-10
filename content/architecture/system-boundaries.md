@@ -1,9 +1,25 @@
 # System boundaries
 
+## Current full-theme correction · 8 September 2026
+
+The default theme must own selected pages from head to footer, with a parentless Magento layout,
+Alpine CSP storefront assets independent of RequireJS, shared menus/settings and real native account
+behavior. The optional hybrid region path remains separate. Read the [current architecture](full-page-theme.md)
+and [native evidence](../roadmap/full-page-theme-evidence-2026-09-08.md); the research and earlier
+bounded observations below are historical and do not define the final full-theme boundary.
+
+The [CMS pages and storefront delivery proposal](cms-page-delivery.md), documented 10 September
+2026, explains native CMS identity, separate MTE release storage, entity-based assignments,
+store-hosted assets, publishing and outage behavior. It distinguishes the recommended production
+design from the current fixed-route local implementation.
+
 Status: recommended architecture to validate. Updated: 7 September 2026.
 This summary derives from the [completed research](theme-editor-research-2026-09-07.md);
 hybrid routing is clarified by the [local requirements](../requirements/hybrid-adoption.md).
-No components in this diagram have been implemented or verified by this documentation task.
+Batch 01 adds an [executable contract and pure transition model](content-contract.md). The hosted
+services and connector in this diagram remain unimplemented. Batch 02 supplies a local editor
+concept; [Batch 03A](../roadmap/batch-03a-evidence-2026-09-07.md) verifies one fixture-only native
+Luma home hero. [Batch 03B](../roadmap/batch-03b-evidence-2026-09-07.md) extends that fixed region to native hero/grid, live prices and simple/configurable guest cart proof. Full adapters, authenticated preview and publication remain unverified.
 
 ```mermaid
 flowchart TD
@@ -20,6 +36,20 @@ flowchart TD
     Original --> HTML[Storefront response]
     Adapter --> HTML
 ```
+
+## Observed local boundary · Batch 03A
+
+The unchanged portable content contract supplies a hero-only projection to an explicit local CLI
+experiment. Magento selects one registered CMS-block region only on the mapped home/store/Luma
+context, preserving the same block on an unassigned page and restoring native output when selection
+is removed. The active bytes are revalidated and rendered through a fixed escaped template with
+scoped CSS. The editor is not connected to this fixture.
+
+Private local files are not the proposed release/signature/assignment protocol. There is no hosted
+handshake, preview authentication, complete PHP validation parity, durable rollback,
+multi-node activation or FPC/outage guarantee. These limits remain part of the planned responsibilities
+below; the [fixture evidence](integration-fixtures.md#current-bounded-fixture-batch-03a) defines the
+runtime combination and target. Batch 03B adds a bounded grid renderer with five fixture-native opaque mappings, current Magento pricing/salability, native cart forms and configurable PDP flow. The canonical contract and fixed region boundary remain unchanged; full adapter/publication responsibilities stay open.
 
 ## Responsibility contract
 
@@ -64,6 +94,6 @@ remotely is not source protection. These are research conclusions, not tested pr
 
 ## Decisions still needed
 
-Finalize support versions, assignment precedence, supported page/region combinations, theme
+Finalize support versions, validate the [prototype precedence rules](content-contract.md#assignment-ownership-and-precedence), supported page/region combinations, theme
 foundation licensing, persistence schemas, concurrency handling, storage/hosting selection, and
 performance budgets. Track the status of each in the [decision register](../decisions/index.md).

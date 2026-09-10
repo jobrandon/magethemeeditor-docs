@@ -2,3 +2,5 @@ title: Decisions
 nav:
   - index.md
   - 0001-independent-documentation.md
+  - 0002-portable-contract.md
+  - 0003-local-editor-choice.md

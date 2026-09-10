@@ -6,6 +6,12 @@ Status: **proposed**, 2026-09-10. These behaviors are implementation requirement
 
 ## Main editing journey
 
+Navigation refinement · 2026-09-10: the user requires a working storefront with the editor available
+as a layer, normal link navigation and confirmation before leaving unsaved work. The
+[interactive storefront specification](storefront-navigation.md) defines Browse/Select behavior,
+guarded navigation and saved-versus-unpublished states. It refines the earlier Edit/Preview design
+below; this new flow is not yet implemented.
+
 Choose a page, inspect the full Header / Template / Footer outline, select the storefront element, edit its focused settings, preview at a device width, then save the named draft resource. Show one primary save action appropriate to the active scope. History and resource reload live in supporting controls. The account/bag of the fictional storefront never open real Magento in the sandbox.
 
 Use a page switcher containing all current choices: Home, About, FAQ, Editorial collection, Stories & details, Media studio, Motion & voices, Catalog discovery, Product, Search, Commerce examples, Contact studio, Studio letters and Studio invitation. Search matches display names. Display page title, template and draft state in each row. Switching the page preserves each resource's in-memory edits, selection and scroll position. It is navigation, not a save or template replacement.
