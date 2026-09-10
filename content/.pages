@@ -3,6 +3,7 @@ nav:
   - product
   - architecture
   - requirements
+  - design
   - roadmap
   - decisions
   - contributing
