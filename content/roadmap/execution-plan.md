@@ -1,8 +1,62 @@
 # Product execution plan
 
 Status: **full-page Silt theme and populated local commerce journey implemented; independent commerce-boundary review and remaining catalog acceptance open**.
-Updated: 2026-09-10. Current requirements: [full-page theme and menus](../architecture/full-page-theme.md).
+Updated: 2026-09-11. Current requirements: [full-page theme and menus](../architecture/full-page-theme.md) and [Liquid developer theme authoring](../decisions/0004-developer-theme-authoring.md).
 Current evidence: [full-page correction](full-page-theme-evidence-2026-09-08.md) and [full-theme commerce handoff](full-theme-commerce-evidence-2026-09-09.md).
+
+## Completed-source delivery and next standards task · 11 September 2026
+
+The user requested completed worktree/session changes be pushed before new development or
+cleanup, and explicitly authorized making the product repository private. Completed source
+is delivered on product `main` at `2080a79`, retaining both existing histories. Fresh checks
+pass: product 187 tests, SDK 45 PHP + 24 Node tests, and component library 39 tests. The
+[release handoff](completed-source-release-2026-09-11.md) records ownership, source coverage,
+exclusions and evidence boundaries. No main runtime pin or native installation was changed.
+
+The new **Frontend standards — Senior Expert** task `01a08e7d-ad71-71c2-b0e8-412f0a46fd97`
+owns the next scoped editor standards refactor in worktree `2653`, using GPT-6 Astra High
+and its explicitly requested Senior Frontend Expert sub-agent. Its initial moves are paused,
+unverified and excluded from this delivery; resume only after both pushes are verified.
+PM retains original-checkout integration and main4177 restarts. The SDK owner retains its
+separate package/native scope. Earlier owner/status paragraphs below are historical evidence;
+consult live tasks before resumption, and do not restart completed writers.
+
+## Liquid theme direction and editor ownership · 11 September 2026
+
+The user selected **Liquid** and subsequently set this thread's active goal to **complete the Liquid implementation**. Task `01a08c5d-bf41-7720-9a6b-0f44a9e810d5` now owns `theme-sdk/`, its dependencies, package/runtime, developer workflow, reference themes, tests and evidence. The newer authorization supersedes the prior docs-only scope and permits independent SDK work alongside the editor recovery. [ADR 0004](../decisions/0004-developer-theme-authoring.md) preserves the requirements; the [SDK implementation record](../architecture/liquid-theme-sdk.md) describes executable interfaces and remaining acceptance.
+
+The SDK uses reviewed keepsuit/liquid 0.12.0 in PHP with no transitive runtime packages. The accepted schema 1.1 SDK checkpoint passed **46 tests** (32 PHP, 14 Node); the richer-field SDK checkpoint below now passes **64 tests**. Immutable readable packages, schemas, diagnostics, separate merchant state and installed-preview operations work. Original Atelier 1.1.0 has independently accepted native layout/consent/remount/SRI evidence. The separate Atelier Commerce 1.0.2 now exercises native configurable options/prices, quantity, cart acknowledgements, rejected-request preservation and authenticated checkout shipping handoff on existing INOX. A narrow installed SalesOne_CustomerGroupCatalog 1.0.0 return-contract correction preserves its denial policy; broader price hiding/frontend adaptation remains open. Three product fixtures remain, while all five test quotes and the synthetic customer/credentials were cleaned. PM accepted this later commerce checkpoint after reproducing six native probes/seven HTTP cases and fresh product browser checks, verifying cleanup/hashes, and reviewing the writer transaction/shipping evidence without repeating it; see the [receipt](liquid-native-commerce-2026-09-11.md).
+
+PM accepted and integrated the first Liquid HTTP-v1 editor adapter from sole owner `01a08c6f-87f5-78c0-af2e-b337f6d04ed6`: **160 tests**, 18 HTTP cases, 29 source paths, 141 matching build artifacts and 239 sealed SDK files. Browser proof covers complete-state save/reload, conflicts, stale-response suppression, whole-document frames, consent and disposal. Fresh main Liquid/Silt/Daybreak canvases load without JavaScript errors and all 17 original drafts remain unchanged. The main route is `http://127.0.0.1:4177/liquid-theme?id=atelier`, using fictional local catalog and separate persistence. The [v1 contract](../architecture/liquid-theme-sdk.md#editor-integration-contract-v1) is implemented. This is a basic schema interface with ordering arrows: reviewed shell, drag/drop, menus, richer controls, multipage browser proof and full Silt/Daybreak migration remain open. The first adapter assignment was completed; the same editor owner's v2/menu scope is now independently accepted in main. PM owns main integration/restarts. This task retains SDK/native/docs/Linear and has not edited shared product implementation.
+
+Shared-menu schema 1.1 is implemented in the standalone SDK with explicit installed CLI contract 2, complete-state CAS, host-owned references and a separate original two-page Atelier Navigation package. The [concrete menu/HTTP-v2 contract](../architecture/liquid-menus-contract.md) was accepted by PM after the sole editor owner's read-only review. PM accepted and integrated the owner's HTTP-v2/menu UI: 33 product paths, 170 required main tests, 141 matching artifacts and 28 independent HTTP cases in each checkout. Independent main browser checks cover pointer/keyboard menu movement, two-page buffer retention through iframe navigation, unsaved-leave guards and Phone preview; actual persisted save/conflict/schema-upgrade cases remain reviewed writer evidence. Clean Navigation is available at `http://127.0.0.1:4177/liquid-theme?id=atelier-navigation`, schema 1.1/revision 1. Native menus and broader editor parity remain open. The accepted SDK/product/native snapshots stay stable during the next richer-settings contract review. The menu-default and JSON-list gaps are corrected. PM independently accepted all 340 SDK hashes, 35 tests and unchanged main v1 rendering/drafts/native files; the full 46-test suite and standalone browser remain writer evidence. Schema 1.0 envelopes and original theme sources remain intact.
+
+The [same-design native PHTML baseline](liquid-phtml-comparison-2026-09-11.md) is independently accepted on the separate INOX `/mte-phtml/` route. PM reproduced seven isolation checks, two matching document structures and nine render/edit/error probes; fresh read-only desktop/mobile checks confirmed the Gold $34 product. It verified all 22 module files, the exact configuration delta, cleanup of quote 61436/items 261358–261359, and preservation of all 340 SDK files, 241 Liquid native files, 17 drafts and main Atelier. The quantity-1/$34 native cart submission and consent events were accepted from reviewed writer evidence without repeating the transaction. Broader cache/performance/outage, store-wide analytics/external SDK policy, custom provider/extension acceptance, migrations/uninstall, independent authoring and release support/inventory remain open. The active Liquid goal and broad issue criteria remain incomplete.
+
+Existing drafts/applied state, completed Daybreak work and earlier Magento evidence are preserved. Required local Magento validation remains in the existing approved installations after scoped target/file coordination. No new environment, unrelated batch, broad automation, commit, push or production publication is included.
+
+The [read-only Liquid migration inventory](liquid-reference-migration-2026-09-11.md) measures the current original Silt full-page defaults (14 pages, 57 section instances, 44 semantic types) and Daybreak homepage (19 semantic types). It identifies typed media/entity settings, bounded lists, integer enforcement, optional colors and per-field text constraints as lossless conversion prerequisites. Proposed identifier maps were checked; no persisted draft or frozen SDK source was changed. A versioned contract and sole-owner editor coordination precede implementation.
+
+The [richer-settings field slice](../architecture/liquid-rich-settings-contract.md) now implements schema 1.2/CLI3 raw JSON, exact integer roles, rich values/defaults/complete state, one normalized resource catalog and retained-release inspection. Its **363-file** SDK checkpoint at `5fbf967b18bbff745980a0d684833b68d02bdbf7979aecf0e973563351e7c7f4` passed 64 SDK tests and PM independent review. PM then integrated and accepted local HTTP3/schema1.2 in main4177: 31 source paths, 141 artifacts, 183 product checks, two 46-case HTTP runs and rich-field/legacy browser acceptance. Existing drafts, revision-1 selections, native Liquid/PHTML snapshots and both SDK pins remain verified. Full legacy migration remains blocked on video, editable page metadata, coupled validators and complete reverse maps.
+
+The SDK owner has now added two unintegrated schema 1.3/CLI4 prerequisites: typed video identities
+with bounded host records and complete editable page title/description metadata. The original
+`theme-sdk/examples/daybreak-liquid-theme/` is also installable/renderable as a 19-family Liquid
+homepage reference package. These source increments pass 45 PHP and 22 Node SDK tests. They do not
+change the accepted main HTTP3 pin or preserve every legacy Daybreak setting/validator/interaction;
+HTTP4 editor/provider/browser acceptance and complete reversible Silt/Daybreak migration remain open.
+
+The dated navigation and ownership sections below describe earlier states; this entry and the current root instructions supersede their writer/model assignments.
+
+## Interactive storefront navigation · 11 September 2026
+
+Status: **implementation and focused tests complete; browser acceptance blocked by unavailable local preview**. Task `01a08c1e-a267-7da3-b330-beb2f1eb69e5` is the sole writer for a bounded local editor implementation of the
+[storefront navigation and unsaved-change experience](../design/theme-editor-uiux/storefront-navigation.md).
+It is using GPT-5.6 Terra Medium. Scope is the editor navigation
+controller, Browse/Select affordances, guarded local page transitions, focused tests, browser QA
+and a dated receipt. Existing Daybreak work and drafts are preserved; destructive and failed-save
+coverage uses isolated local persistence. This does not resume Magento work or authorize a commit,
+push, publication, Linear mutation or native apply/restore. See the dated [implementation receipt](../design/theme-editor-uiux/storefront-navigation-implementation-2026-09-11.md); the browser flow remains open because the expected local preview returned 404.
 
 ## Resource Desk UI implementation · 10 September 2026
 
@@ -379,7 +433,7 @@ The [custom-module integration proposal](custom-module-data-integration.md) rema
 | Batch / owner | Modified paths | Real checks | Remaining issues / recommended next task |
 | --- | --- | --- | --- |
 | 01 / `01a07ad8-3911-78d1-b5a4-28ba37eba5d7` | New `product/` README/AGENTS, schemas, validator/model, CLI, tests, fixtures, dependency lock/review/notices; docs contract/ADR, support matrix, fixture plan, execution/evidence pages and navigation/current-status links | See [dated evidence](batch-01-evidence-2026-09-07.md): Node tests, dependency identity/notice guard, CLI fixtures, strict docs build/site checks and browser inspection | SOL-491/492 partial; final support versions/interviews and Magento/key/persistence/cache proof remain. Coordinator should assign Batch 02 concept/editor comparison, while obtaining independent fixture access for Batch 03 |
-| 01 review / `01a07af0-aa4e-7b33-a6d5-553840d6d6e9` | Read-only review; ignored evidence in `product/.local/reviews/batch-01/` | Complete: existing 45 tests passed; three desired-behavior repros failed and nine controls passed | Returned F1/P2 asset rebinding, F2/P2 numeric rounding, F3/P3 public kind acceptance for correction; independent recheck pending |
+| 01 review / `01a07af0-aa4e-7b33-a6d5-553840d6d6e9` | Read-only review; ignored evidence in `product/.local/reviews/batch-01/` | Complete: existing 46 tests passed; three desired-behavior repros failed and nine controls passed | Returned F1/P2 asset rebinding, F2/P2 numeric rounding, F3/P3 public kind acceptance for correction; independent recheck pending |
 | 01 remediation / `01a07ad8-3911-78d1-b5a4-28ba37eba5d7` | Only `product/src/contract.mjs`, `product/test/contract.test.mjs` plus contract/ADR/evidence/ledger docs | 53 permanent tests and 12 unchanged review repros/controls pass; CLI/syntax/docs checks recorded in [correction evidence](batch-01-evidence-2026-09-07.md#correction-verification) | Local fixes complete; independent recheck pending before Batch 02. Runtime/customer criteria remain open; no source delivery |
 | 01 independent recheck / `01a07af0-aa4e-7b33-a6d5-553840d6d6e9` | Only new ignored reviewer evidence | 53 permanent tests, 12 original checks, six additional checks and 20 CLI cases; corrected aggregate reproduced | F1/F2/F3 resolved; coordinator accepts local foundation only |
 | 02 / `01a07b0a-53c4-7382-aea4-79c44a2ca13a` | `product/editor/`, demo server/build/tests, README/scripts/lock and third-party records; concept/ADR/evidence/ledger/navigation, fixture amendment and future proposal docs | 71 tests, eight-package/asset/notice guards, loopback/API tests, wide/narrow observed interactions; see dated evidence | SOL-493/501 In Progress; independent review next, then bounded native adapter proof. No Magento/publication/merchant/commercial acceptance |

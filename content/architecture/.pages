@@ -1,5 +1,8 @@
 title: Architecture
 nav:
+  - liquid-theme-sdk.md
+  - liquid-menus-contract.md
+  - liquid-rich-settings-contract.md
   - full-page-theme.md
   - cms-page-delivery.md
   - system-boundaries.md

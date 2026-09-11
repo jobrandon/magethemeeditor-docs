@@ -3,6 +3,8 @@ nav:
   - index.md
   - interactions.md
   - storefront-navigation.md
+  - storefront-navigation-implementation-2026-09-11.md
+  - editor-source-refactor-2026-09-11.md
   - states-and-resources.md
   - handoff.md
   - implementation-2026-09-10.md

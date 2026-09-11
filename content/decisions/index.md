@@ -1,6 +1,6 @@
 # Decision register
 
-Updated: 10 September 2026 for the CMS delivery proposal; other rows retain their stated evidence dates.
+Updated: 11 September 2026 for Liquid developer theme authoring; other rows retain their stated evidence dates.
 A direction can be confirmed without having a verified implementation.
 The original [research](../architecture/theme-editor-research-2026-09-07.md) remains a dated
 recommendation; the user's later instructions confirm the directions below.
@@ -15,7 +15,7 @@ recommendation; the user's later instructions confirm the directions below.
 | Magento retains commerce behavior; versioned JSON and Luma/Hyvä adapters | Confirmed product direction | [Initial contract prototype](../architecture/content-contract.md); full support versions/adapters unverified; [bounded Luma evidence](../roadmap/batch-03a-evidence-2026-09-07.md) |
 | Keep active theme; opt in selected pages or regions | Confirmed product direction | [Hybrid acceptance criteria](../requirements/hybrid-adoption.md); [Linear synchronization verified](../roadmap/batch-01-evidence-2026-09-07.md#linear-synchronization); runtime criteria remain open |
 | Free compatible reference theme | Recommended complete editing path | Foundation, distribution licenses, and exact support matrix still need a decision |
-| Liquid or another general template engine | Optional future exploration | Not required for initial JSON/template architecture; select and prove the authoring runtime before promising a public theme SDK |
+| Liquid developer theme authoring | Selected by the user 2026-09-11; PHP SDK and first editor adapter implemented; bounded native commerce evidence, broader parity and production acceptance open | [ADR 0004](0004-developer-theme-authoring.md): readable installable theme packages; SOL-521 active in M1; [SDK implementation](../architecture/liquid-theme-sdk.md) runs alongside editor recovery with separate ownership; native validation and comparison remain open |
 | Third-party themes and marketplace | Confirmed future direction; separate planning project created | [Future ecosystem roadmap and project artifacts](../roadmap/theme-ecosystem.md#planning-status); documents and plans only, no issues or milestones; implementation and commercial terms unselected |
 | Custom React for the local editor concept | Accepted for Batch 02 only; reversible | [ADR 0003](0003-local-editor-choice.md); portable round-trip and local UI evidence, no Magento proof |
 | Developer-authored section packages | Confirmed product requirement; local proof implemented 2026-09-08 | [Trusted authoring contract](../architecture/developer-packages.md): original five-section package, independent author example and one separate local native notice; general SDK/native adapters remain open |
