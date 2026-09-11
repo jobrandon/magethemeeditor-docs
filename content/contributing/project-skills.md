@@ -9,9 +9,36 @@ This is a tooling adoption record, not commercial product release clearance.
 The workspace uses `.agents/skills/` for these five standalone skills. Personal and system
 skill directories are unchanged. Invoke a skill by its name or let Codex select it when
 the task matches its description. Read individual rules as needed instead of loading
-every complete guide into every task. The project root `AGENTS.md` provides explicit
-paths for tasks whose nested Git repository limits automatic discovery.
+every complete guide into every task. The project root `AGENTS.md` routes here; resolve skill
+paths against the workspace root when a nested Git repository limits automatic discovery.
 [Codex skill discovery](https://developers.openai.com/codex/skills/)
+
+## Task routing
+
+Read only this section to choose a skill. Entrypoints are
+`.agents/skills/<skill-name>/SKILL.md` relative to the workspace root. Read the selected
+entrypoint before applying it, then only relevant rules/references; name it briefly on first use.
+
+| Actual task | Skill | Boundary |
+| --- | --- | --- |
+| React rendering, hooks, subscriptions, loading or performance | `vercel-react-best-practices` | Match installed React; Next.js rules need a Next.js target. |
+| Reusable component APIs, compound components or providers | `vercel-composition-patterns` | Add for composition work, not every small React edit. |
+| Node requests, validation, errors, API/auth/persistence boundaries | `nodejs-backend-patterns` | Running npm, static serving or build-script edits alone do not require it. |
+| Tailwind v4 tokens, variants, responsive layout or styles | `tailwind-design-system` | Apply to the authorized styling target; no unrelated migration. |
+| Focus, keyboard/touch, forms, accessibility or interaction review | `web-design-guidelines` | Use bundled pinned rules and actual browser checks when behavior matters. |
+
+Combine skills only when scopes overlap. Markdown/status, coordination and established checks
+do not need implementation skills; select one if diagnosis becomes code work. For Magento/PHP,
+Alpine, documents or browser operation use the relevant domain skill. Visual exploration uses
+the applicable Product Design workflow. Reuse guidance already read unless it changes.
+
+Include relevant skill paths in already-authorized task briefs; receiving agents read and
+reassess selection themselves. Skills add no delegation, dependency, model, framework or approval
+requirements and do not resume paused work. Preserve immutable revisions, hashes and notices in
+`.agents/skills.lock.json` and installed directories. Never run upstream skill-maintainer builds
+as product commands. Reading a skill is not implementation or acceptance evidence.
+
+## Installed inventory
 
 | Skill | Use in MageThemeEditor | Source revision |
 | --- | --- | --- |
@@ -73,5 +100,5 @@ then update the lock and this record. Do not bulk-refresh the entire upstream re
 The web-interface snapshot is updated through the same review, not fetched automatically.
 
 For removal, delete only the five named skill directories and remove their routing entries
-from the root `AGENTS.md`. Retain or intentionally retire the corresponding lock and review
+from this task-routing table. Retain or intentionally retire the corresponding lock and review
 record; preserve any other skills added to the workspace later.
