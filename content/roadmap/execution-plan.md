@@ -13,13 +13,23 @@ pass: product 187 tests, SDK 45 PHP + 24 Node tests, and component library 39 te
 [release handoff](completed-source-release-2026-09-11.md) records ownership, source coverage,
 exclusions and evidence boundaries. No main runtime pin or native installation was changed.
 
-The new **Frontend standards — Senior Expert** task `01a08e7d-ad71-71c2-b0e8-412f0a46fd97`
-owns the next scoped editor standards refactor in worktree `2653`, using GPT-6 Astra High
-and its explicitly requested Senior Frontend Expert sub-agent. Its initial moves are paused,
-unverified and excluded from this delivery; resume only after both pushes are verified.
-PM retains original-checkout integration and main4177 restarts. The SDK owner retains its
-separate package/native scope. Earlier owner/status paragraphs below are historical evidence;
-consult live tasks before resumption, and do not restart completed writers.
+After both pushes were verified, **Frontend standards — Senior Expert** task
+`01a08e7d-ad71-71c2-b0e8-412f0a46fd97` completed the scoped refactor with GPT-6 Astra High
+and its requested Senior Frontend Expert sub-agent. PM reviewed and integrated all 100 source
+changes into the canonical local checkout, verified 187 tests and 142 matching build artifacts,
+and restarted main4177 with its existing SDK pin and drafts preserved. The
+[standards receipt](../design/theme-editor-uiux/editor-frontend-standards-2026-09-11.md#pm-local-integration-and-review-workflow)
+separates writer and PM evidence. Following the user's explicit push request, the reviewed
+refactor is committed and pushed to private product `main` at `0e05ace`.
+
+The user's latest instruction makes that frontend task the sole editor implementation writer
+directly in the canonical checkout for future authorized increments. The task confirmed explicit
+canonical paths/workdir; its old worktree `2653` remains historical evidence, not the active edit
+location. The completed batch is available for user review; no further batch is running.
+Future increments remain local and uncommitted until the user requests another delivery.
+PM retains preview restart coordination. The SDK owner retains its separate package/native scope.
+Earlier owner/status paragraphs below are historical evidence; consult live tasks before resumption,
+and do not restart completed writers.
 
 ## Liquid theme direction and editor ownership · 11 September 2026
 

@@ -25,6 +25,20 @@ Historical labels, assignments and acceptance receipts do not authorize another 
   other owners' source and coordinate shared `component-library/` changes. A worktree build
   does not update the main preview automatically.
 
+## Local frontend review workflow
+
+- The main frontend refactor developer works directly in the canonical checkout,
+  `/Users/branorphiano/Projects/jobrandon/MageThemeEditor`, so the user can review source
+  and the local preview during development. Use explicit canonical paths/workdir even if
+  a task's historical app cwd still points to a worktree.
+- Keep one implementation writer for editor files. Other agents may review independently;
+  do not assign overlapping edits. Keep increments small and honor user interruptions.
+- Leave refactor changes uncommitted and unpushed until the user requests delivery.
+  Preserve historical worktrees; do not reset, delete or automatically transfer their Git
+  state over the canonical checkout. Record the current writer in the execution plan.
+- Coordinate local preview refreshes with PM and preserve the runtime configuration and
+  drafts described below. A completed earlier push does not authorize later refactor pushes.
+
 ## Models
 
 | Work | Model and effort |
